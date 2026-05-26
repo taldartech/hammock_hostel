@@ -382,7 +382,32 @@ a:hover{ color: color-mix(in srgb, var(--color-primary) 85%, #000); }
   border-radius: 18px;
 }
 .featured-room-media{
+  position: relative;
   border-bottom: 0;
+}
+.featured-room-location-badge{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+  background: rgba(255, 255, 255, .92);
+  border: 1px solid rgba(51, 51, 51, .12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+  backdrop-filter: blur(6px);
+}
+.featured-room-location-badge i{
+  font-size: .85rem;
+  color: var(--color-primary);
 }
 .featured-room-link{
   display: inline-flex;
