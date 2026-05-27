@@ -653,21 +653,21 @@ a:hover{ color: color-mix(in srgb, var(--color-primary) 85%, #000); }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 14px;
   margin-top: auto;
   width: 100%;
 }
 .testimonial-avatar{
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: .82rem;
-  font-weight: 700;
-  color: #fff;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-rust));
+  width: auto;
+  min-width: 56px;
+  max-width: 96px;
+  height: 52px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  object-fit: contain;
+  background: #fff;
+  padding: 6px 10px;
+  border: 1px solid rgba(0,0,0,.08);
 }
 .testimonial-name{
   font-weight: 500;
