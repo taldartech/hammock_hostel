@@ -1,0 +1,88 @@
+{
+  "heroHighlight": {
+    "platformId": "google",
+    "label": "Google Maps rated {score}+ stars"
+  },
+  "platforms": [
+    {
+      "id": "hostelworld",
+      "name": "Hostelworld",
+      "logo": "assets/rating/hw.png",
+      "score": 9.0,
+      "scale": 10,
+      "reviewCount": 1126,
+      "reviewLabel": "reviews",
+      "enabled": true
+    },
+    {
+      "id": "bookingcom",
+      "name": "Booking.com",
+      "logo": "assets/rating/bookingcom.png",
+      "score": 9.1,
+      "scale": 10,
+      "reviewCount": 1398,
+      "reviewLabel": "comments",
+      "enabled": true
+    },
+    {
+      "id": "agoda",
+      "name": "Agoda",
+      "logo": "assets/rating/agoda.png",
+      "score": 8.3,
+      "scale": 10,
+      "reviewCount": 972,
+      "reviewLabel": "reviews",
+      "enabled": true
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "logo": "assets/rating/google.png",
+      "score": 4.9,
+      "scale": 5,
+      "reviewCount": 2389,
+      "reviewLabel": "ratings",
+      "enabled": true
+    },
+    {
+      "id": "goibibo",
+      "name": "Goibibo",
+      "logo": "assets/rating/goibibo.png",
+      "score": 4.7,
+      "scale": 5,
+      "reviewCount": 1074,
+      "reviewLabel": "ratings",
+      "enabled": true
+    },
+    {
+      "id": "mmt",
+      "name": "MakeMyTrip",
+      "logo": "assets/rating/mmt.png",
+      "score": 4.3,
+      "scale": 5,
+      "reviewCount": 1842,
+      "reviewLabel": "reviews",
+      "enabled": true
+    },
+    {
+      "id": "expedia",
+      "name": "Expedia",
+      "logo": "assets/rating/expedia.png",
+      "score": 9.6,
+      "scale": 10,
+      "reviewCount": 460,
+      "reviewLabel": "notes",
+      "enabled": false
+    },
+    {
+      "id": "tripadvisor",
+      "name": "Tripadvisor",
+      "logo": "assets/rating/tripadvisor.png",
+      "score": 4.5,
+      "scale": 5,
+      "reviewCount": 836,
+      "reviewLabel": "reviews",
+      "enabled": false
+    }
+  ]
+}

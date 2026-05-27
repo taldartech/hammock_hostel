@@ -107,12 +107,24 @@
     }
   });
 
-  // Ratings slider (index page): show 3 cards and slide one-by-one.
-  const ratingSlider = document.querySelector("[data-rating-slider]");
-  if (ratingSlider) {
-    const track = ratingSlider.querySelector(".rating-track");
-    if (track) {
-      const baseItems = Array.from(track.children).map((node) => node.cloneNode(true));
+  const formatReviewCount = (count) => Number(count).toLocaleString("en-US");
+
+  const buildRatingItem = (platform) => {
+    const article = document.createElement("article");
+    article.className = "rating-item";
+    const scoreText = `${platform.score}/${platform.scale}`;
+    const countText = `${formatReviewCount(platform.reviewCount)} ${platform.reviewLabel}`;
+    article.innerHTML = `<img loading="lazy" decoding="async" src="${platform.logo}" alt="${platform.name}" /><p><strong>${scoreText}</strong> · ${countText}</p>`;
+    return article;
+  };
+
+  const initRatingSlider = (track) => {
+    if (!track || !track.children.length) return;
+
+    const ratingSlider = track.closest("[data-rating-slider]");
+    if (!ratingSlider) return;
+
+    const baseItems = Array.from(track.children).map((node) => node.cloneNode(true));
       let currentIndex = 0;
       let timer = null;
       let pause = false;
@@ -174,8 +186,41 @@
       ratingSlider.addEventListener("mouseleave", () => {
         pause = false;
       });
+  };
+
+  const initRatingsFromJson = async () => {
+    const ratingSlider = document.querySelector("[data-rating-slider]");
+    const track = ratingSlider?.querySelector(".rating-track");
+    if (!track) return;
+
+    let data;
+    try {
+      const response = await fetch("assets/data/ratings.json");
+      if (!response.ok) return;
+      data = await response.json();
+    } catch {
+      return;
     }
-  }
+
+    const platforms = (data.platforms || []).filter((platform) => platform.enabled !== false);
+    const platformById = Object.fromEntries(platforms.map((platform) => [platform.id, platform]));
+
+    const heroBadge = document.querySelector("[data-rating-hero]");
+    if (heroBadge && data.heroHighlight) {
+      const highlightPlatform = platformById[data.heroHighlight.platformId];
+      const score = highlightPlatform?.score ?? "";
+      heroBadge.textContent = (data.heroHighlight.label || "").replace("{score}", String(score));
+    }
+
+    track.innerHTML = "";
+    platforms.forEach((platform) => {
+      track.appendChild(buildRatingItem(platform));
+    });
+
+    initRatingSlider(track);
+  };
+
+  initRatingsFromJson();
 
   // Room slider (index page): show 3 room cards and slide one-by-one.
   const roomSlider = document.querySelector("[data-room-slider]");
