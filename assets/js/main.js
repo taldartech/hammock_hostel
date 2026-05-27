@@ -1,11 +1,21 @@
 (() => {
-  const BOOKING_URL = "https://live.ipms247.com/booking/book-rooms-hammockhostels";
+  const BOOKING_URLS = {
+    jaipur: "https://live.ipms247.com/booking/book-rooms-indisoulhospitalityworkspvtltdhammockhostels",
+    mumbai: "https://live.ipms247.com/booking/book-rooms-hammockhostels",
+  };
 
-  // Ensure any element marked as data-book-now routes correctly.
-  document.querySelectorAll("[data-book-now]").forEach((el) => {
-    el.setAttribute("href", BOOKING_URL);
+  const applyBookingLink = (el, url) => {
+    el.setAttribute("href", url);
     el.setAttribute("target", "_blank");
     el.setAttribute("rel", "noopener noreferrer");
+  };
+
+  document.querySelectorAll("[data-book-jaipur]").forEach((el) => {
+    applyBookingLink(el, BOOKING_URLS.jaipur);
+  });
+
+  document.querySelectorAll("[data-book-mumbai]").forEach((el) => {
+    applyBookingLink(el, BOOKING_URLS.mumbai);
   });
 
   // Mark active nav link based on current path.
@@ -24,16 +34,28 @@
     el.textContent = currentYear;
   });
 
-  // Sticky mobile booking CTA for faster conversion.
+  // Sticky mobile booking CTAs (Jaipur + Mumbai).
   const mobileViewport = window.matchMedia("(max-width: 991.98px)");
   if (mobileViewport.matches) {
-    const mobileCta = document.createElement("a");
-    mobileCta.className = "mobile-book-cta";
-    mobileCta.setAttribute("data-book-now", "");
-    mobileCta.setAttribute("href", BOOKING_URL);
-    mobileCta.setAttribute("aria-label", "Book your stay now");
-    mobileCta.textContent = "Book Now";
-    document.body.appendChild(mobileCta);
+    const mobileBar = document.createElement("div");
+    mobileBar.className = "mobile-book-cta-bar";
+    mobileBar.setAttribute("role", "group");
+    mobileBar.setAttribute("aria-label", "Book your stay");
+
+    const jaipurBtn = document.createElement("a");
+    jaipurBtn.className = "btn btn-primary flex-fill";
+    jaipurBtn.setAttribute("data-book-jaipur", "");
+    jaipurBtn.textContent = "Book Jaipur";
+
+    const mumbaiBtn = document.createElement("a");
+    mumbaiBtn.className = "btn btn-outline-primary flex-fill";
+    mumbaiBtn.setAttribute("data-book-mumbai", "");
+    mumbaiBtn.textContent = "Book Mumbai";
+
+    mobileBar.append(jaipurBtn, mumbaiBtn);
+    document.body.appendChild(mobileBar);
+    applyBookingLink(jaipurBtn, BOOKING_URLS.jaipur);
+    applyBookingLink(mumbaiBtn, BOOKING_URLS.mumbai);
   }
 
   // Reveal-on-scroll animations for key layout blocks.

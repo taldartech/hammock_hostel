@@ -33,7 +33,24 @@
             <li class="nav-item"><a class="nav-link" data-nav href="blog.html">Blog</a></li>
             <li class="nav-item"><a class="nav-link" data-nav href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" data-nav href="contact.html">Contact</a></li>
-            <li class="nav-item ms-lg-2"><a class="btn btn-primary px-3" data-book-now href="https://live.ipms247.com/booking/book-rooms-hammockhostels">Book Now</a></li>
+            <li class="nav-item dropdown ms-lg-2 book-nav-dropdown">
+              <button
+                class="btn btn-primary px-3 dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Book Now
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                <li>
+                  <a class="dropdown-item" data-book-jaipur href="https://live.ipms247.com/booking/book-rooms-indisoulhospitalityworkspvtltdhammockhostels">Book Jaipur</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" data-book-mumbai href="https://live.ipms247.com/booking/book-rooms-hammockhostels">Book Mumbai</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -70,7 +87,10 @@
         <div class="container container-narrow">
           <div class="row g-3">
             <div class="col-md-6"><div class="hero-card p-4 h-100"><h2 class="h5 fw-bold mb-2">What shared travel gives you</h2><ul class="mb-0 ps-3 d-grid gap-2"><li>Local insight from fellow backpackers</li><li>Greater confidence for solo travel</li><li>Lifelong friendships beyond destinations</li></ul></div></div>
-            <div class="col-md-6"><div class="hero-card p-4 h-100"><h2 class="h5 fw-bold mb-2">Ready to experience it?</h2><p class="text-muted mb-3">Book your stay and join a global community of travelers under one roof.</p><a class="btn btn-primary" data-book-now href="https://live.ipms247.com/booking/book-rooms-hammockhostels">Book Now</a></div></div>
+            <div class="col-md-6"><div class="hero-card p-4 h-100"><h2 class="h5 fw-bold mb-2">Ready to experience it?</h2><p class="text-muted mb-3">Book your stay and join a global community of travelers under one roof.</p><div class="book-cta-pair d-flex flex-wrap gap-2">
+                  <a class="btn btn-primary" data-book-jaipur href="https://live.ipms247.com/booking/book-rooms-indisoulhospitalityworkspvtltdhammockhostels">Book Jaipur</a>
+                  <a class="btn btn-outline-primary" data-book-mumbai href="https://live.ipms247.com/booking/book-rooms-hammockhostels">Book Mumbai</a>
+                </div></div></div>
           </div>
         </div>
       </section>
@@ -117,7 +137,10 @@
           <div class="col-lg-4"><img loading="lazy" decoding="async" class="footer-logo" src="assets/logo/hammock-logo.png" alt="Hammock Hostels" /><p class="mt-3 mb-2 fineprint">India's most loved travel hostel community.</p><p class="mb-0 fineprint">© <span data-current-year></span> Hammock Hostels. All rights reserved.</p></div>
           <div class="col-6 col-md-4 col-lg-2"><div class="fw-semibold mb-2">Company</div><div class="d-grid gap-1"><a href="index.html">Home</a><a href="about.html">Our Story</a><a href="properties.html">Locations</a><a href="blog.html">Blog</a><a href="gallery.html">Gallery</a><a href="general-policy.html">General Policy</a><a href="booking-refund-policy.html">Booking &amp; Refund Policy</a></div></div>
           <div class="col-6 col-md-4 col-lg-3"><div class="fw-semibold mb-2">Connect</div><div class="d-grid gap-1 footer-social-links"><a href="https://wa.me/+919152216941" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp me-2" aria-hidden="true"></i>WhatsApp</a><a href="mailto:hello@hammockhostels.com"><i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>Email</a><a href="https://www.instagram.com/hammock.hostels?igsh=cXl5Z3djZmlzbGJj" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram me-2" aria-hidden="true"></i>Instagram</a><a href="contact.html"><i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>Contact</a></div></div>
-          <div class="col-md-4 col-lg-3"><div class="fw-semibold mb-2">Book Your Stay</div><p class="fineprint mb-3">Ready to stay with us? Reserve your bed in a few clicks.</p><a class="btn btn-primary w-100" data-book-now href="https://live.ipms247.com/booking/book-rooms-hammockhostels">Book Now</a>
+          <div class="col-md-4 col-lg-3"><div class="fw-semibold mb-2">Book Your Stay</div><p class="fineprint mb-3">Ready to stay with us? Reserve your bed in a few clicks.</p><div class="book-cta-pair book-cta-pair--stack">
+              <a class="btn btn-primary w-100" data-book-jaipur href="https://live.ipms247.com/booking/book-rooms-indisoulhospitalityworkspvtltdhammockhostels">Book Jaipur</a>
+              <a class="btn btn-outline-primary w-100" data-book-mumbai href="https://live.ipms247.com/booking/book-rooms-hammockhostels">Book Mumbai</a>
+            </div>
             <a class="fineprint d-inline-block text-decoration-none" href="https://taldartechconsultancy.com" target="_blank" rel="noopener noreferrer">Designed &amp; Developed by Taldar Tech Consultancy.</a></div>
         </div>
       </div>

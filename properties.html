@@ -42,8 +42,23 @@
             <li class="nav-item"><a class="nav-link" data-nav href="blog.html">Blog</a></li>
             <li class="nav-item"><a class="nav-link" data-nav href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" data-nav href="contact.html">Contact</a></li>
-            <li class="nav-item ms-lg-2">
-              <a class="btn btn-primary px-3" data-book-now href="https://live.ipms247.com/booking/book-rooms-hammockhostels">Book Now</a>
+            <li class="nav-item dropdown ms-lg-2 book-nav-dropdown">
+              <button
+                class="btn btn-primary px-3 dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Book Now
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                <li>
+                  <a class="dropdown-item" data-book-jaipur href="https://live.ipms247.com/booking/book-rooms-indisoulhospitalityworkspvtltdhammockhostels">Book Jaipur</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" data-book-mumbai href="https://live.ipms247.com/booking/book-rooms-hammockhostels">Book Mumbai</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -96,7 +111,7 @@
                   </p>
                   <div class="d-flex gap-2">
                     <a class="btn btn-primary" href="jaipur.html">Explore Property</a>
-                    <a class="btn btn-outline-primary" data-book-now href="https://live.ipms247.com/booking/book-rooms-hammockhostels">Book Now</a>
+                    <a class="btn btn-outline-primary" data-book-jaipur href="https://live.ipms247.com/booking/book-rooms-indisoulhospitalityworkspvtltdhammockhostels">Book Now</a>
                   </div>
                 </div>
               </div>
@@ -118,7 +133,7 @@
                   </p>
                   <div class="d-flex gap-2">
                     <a class="btn btn-primary" href="mumbai.html">Explore Property</a>
-                    <a class="btn btn-outline-primary" data-book-now href="https://live.ipms247.com/booking/book-rooms-hammockhostels">Book Now</a>
+                    <a class="btn btn-outline-primary" data-book-mumbai href="https://live.ipms247.com/booking/book-rooms-hammockhostels">Book Now</a>
                   </div>
                 </div>
               </div>
@@ -127,7 +142,7 @@
         </div>
       </section>
 
-      <section class="section pt-0">
+      <!-- <section class="section pt-0">
         <div class="container">
           <div class="section-heading mb-4">
             <div class="section-kicker">Discover Stays</div>
@@ -174,7 +189,7 @@
             <a class="btn btn-outline-primary" href="mumbai.html">Stay in Mumbai</a>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="section pt-0">
         <div class="container">
@@ -185,7 +200,10 @@
                 <p class="text-muted mb-0">Book your stay and join the Hammock community.</p>
               </div>
               <div class="col-lg-4 text-lg-end">
-                <a class="btn btn-primary btn-lg w-100 w-lg-auto px-4" data-book-now href="https://live.ipms247.com/booking/book-rooms-hammockhostels">Book Now</a>
+                <div class="book-cta-pair d-flex flex-wrap gap-2 justify-content-lg-end">
+                  <a class="btn btn-primary px-4" data-book-jaipur href="https://live.ipms247.com/booking/book-rooms-indisoulhospitalityworkspvtltdhammockhostels">Book Jaipur</a>
+                  <a class="btn btn-outline-primary px-4" data-book-mumbai href="https://live.ipms247.com/booking/book-rooms-hammockhostels">Book Mumbai</a>
+                </div>
               </div>
             </div>
           </div>
@@ -227,7 +245,10 @@
           <div class="col-md-4 col-lg-3">
             <div class="fw-semibold mb-2">Book Your Stay</div>
             <p class="fineprint mb-3">Ready to stay with us? Reserve your bed in a few clicks.</p>
-            <a class="btn btn-primary w-100" data-book-now href="https://live.ipms247.com/booking/book-rooms-hammockhostels">Book Now</a>
+            <div class="book-cta-pair book-cta-pair--stack">
+              <a class="btn btn-primary w-100" data-book-jaipur href="https://live.ipms247.com/booking/book-rooms-indisoulhospitalityworkspvtltdhammockhostels">Book Jaipur</a>
+              <a class="btn btn-outline-primary w-100" data-book-mumbai href="https://live.ipms247.com/booking/book-rooms-hammockhostels">Book Mumbai</a>
+            </div>
             <a class="fineprint d-inline-block text-decoration-none" href="https://taldartechconsultancy.com" target="_blank" rel="noopener noreferrer">Designed &amp; Developed by Taldar Tech Consultancy.</a>
           </div>
         </div>
