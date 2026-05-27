@@ -252,6 +252,93 @@ a:hover{ color: color-mix(in srgb, var(--color-primary) 85%, #000); }
 .hero-media:hover img{
   transform: scale(1.04);
 }
+.about-story-section{
+  padding-top: 52px;
+}
+.about-story-intro{
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(51,51,51,.1);
+  background: linear-gradient(160deg, #fff, rgba(248,245,239,.95));
+  box-shadow: 0 14px 34px rgba(0,0,0,.08);
+  padding: 28px 24px;
+}
+.about-story-pillars{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.about-story-pill{
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(29,125,143,.22);
+  background: rgba(29,125,143,.08);
+  color: var(--color-primary);
+  font-size: .82rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 9px 12px;
+}
+.about-story-timeline{
+  display: grid;
+  gap: 14px;
+}
+.about-story-step{
+  position: relative;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(51,51,51,.1);
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  padding: 20px 20px 20px 26px;
+}
+.about-story-step::before{
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 18px;
+  bottom: 18px;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--color-primary), var(--color-rust));
+}
+.about-values-wrap{
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(29,125,143,.06), rgba(230,164,82,.08));
+  border: 1px solid rgba(51,51,51,.1);
+  padding: 22px;
+}
+.about-value-card{
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(51,51,51,.1);
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 10px 24px rgba(0,0,0,.05);
+  padding: 20px;
+}
+.about-value-icon{
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(29,125,143,.12);
+  color: var(--color-primary);
+  font-size: 1.12rem;
+  margin-bottom: 12px;
+}
+@media (max-width: 991.98px){
+  .about-story-intro{
+    padding: 24px 20px;
+  }
+}
+@media (max-width: 575.98px){
+  .about-story-step{
+    padding: 18px 16px 18px 24px;
+  }
+  .about-values-wrap{
+    padding: 16px;
+  }
+}
 .hero-media-carousel{
   position: relative;
   padding: 0;
