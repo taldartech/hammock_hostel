@@ -8,9 +8,9 @@
       "id": "hostelworld",
       "name": "Hostelworld",
       "logo": "assets/rating/hw.png",
-      "score": 9.0,
+      "score": 9.4,
       "scale": 10,
-      "reviewCount": 1126,
+      "reviewCount": 317,
       "reviewLabel": "reviews",
       "enabled": true
     },
@@ -20,7 +20,7 @@
       "logo": "assets/rating/bookingcom.png",
       "score": 9.1,
       "scale": 10,
-      "reviewCount": 1398,
+      "reviewCount": 722,
       "reviewLabel": "comments",
       "enabled": true
     },
@@ -28,9 +28,9 @@
       "id": "agoda",
       "name": "Agoda",
       "logo": "assets/rating/agoda.png",
-      "score": 8.3,
+      "score": 8.6,
       "scale": 10,
-      "reviewCount": 972,
+      "reviewCount": 529,
       "reviewLabel": "reviews",
       "enabled": true
     },
@@ -40,7 +40,7 @@
       "logo": "assets/rating/google.png",
       "score": 4.9,
       "scale": 5,
-      "reviewCount": 2389,
+      "reviewCount": 506,
       "reviewLabel": "ratings",
       "enabled": true
     },
@@ -50,7 +50,7 @@
       "logo": "assets/rating/goibibo.png",
       "score": 4.7,
       "scale": 5,
-      "reviewCount": 1074,
+      "reviewCount": 103,
       "reviewLabel": "ratings",
       "enabled": true
     },
@@ -60,7 +60,7 @@
       "logo": "assets/rating/mmt.png",
       "score": 4.3,
       "scale": 5,
-      "reviewCount": 1842,
+      "reviewCount": 147,
       "reviewLabel": "reviews",
       "enabled": true
     },
