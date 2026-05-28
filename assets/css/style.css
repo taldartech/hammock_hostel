@@ -1490,3 +1490,7 @@ footer .btn-primary{
   }
 }
 
+.width-fit-content{
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
