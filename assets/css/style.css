@@ -1009,9 +1009,6 @@ a:hover{ color: color-mix(in srgb, var(--color-primary) 85%, #000); }
   padding: 11px 10px;
   box-shadow: 0 10px 22px rgba(0, 0, 0, .2);
 }
-.mobile-book-cta-bar .btn-outline-primary{
-  background: #fff;
-}
 
 /* Property comparison module */
 .property-compare{
